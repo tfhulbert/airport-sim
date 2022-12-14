@@ -8,7 +8,7 @@
 
 #define DEFAULT_RUNWAY_LENGTH 1000
 
-Airport::Airport(int runwayCount, int hangerCount, int terminalCount)
+Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned int terminalCount)
 {
    totalHangerCount_ = 0;
    totalRunwayCount_ = 0;
@@ -39,12 +39,12 @@ Airport::Airport(int runwayCount, int hangerCount, int terminalCount)
    std::cout << "Number of Terminals is " << totalTerminalCount_ << std::endl;
 }
 
-int Airport::GetRunwayCount()
+unsigned int Airport::GetRunwayCount()
 {
    return totalRunwayCount_;
 }
 
-int Airport::GetHangerCount()
+unsigned int Airport::GetHangerCount()
 {
    return totalHangerCount_;
 }
@@ -77,7 +77,7 @@ Hanger* Airport::FindEmptyHanger()
    return searchItem;
 };
 
-int Airport::GetTerminalCount()
+unsigned int Airport::GetTerminalCount()
 {
    return totalTerminalCount_;
 }

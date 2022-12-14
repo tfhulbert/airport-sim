@@ -16,7 +16,29 @@
 class Runway
 {
    public:
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: Runway
+      //
+      // Description:
+      // Constructor for the Runway class.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
       Runway(int runwayLength);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetRunwayLength
+      //
+      // Description:
+      // Returns the length of the runway object.
+      //
+      // Notes:
+      // {notes}
+      //
+      //-------------------------------------------------------------------------------
       unsigned int GetRunwayLength();
 
    private:

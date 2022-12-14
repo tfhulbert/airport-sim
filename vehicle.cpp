@@ -11,19 +11,20 @@ Vehicle::Vehicle()
 
 };
 
-Vehicle::Vehicle(int maxPassengers)
+Vehicle::Vehicle(unsigned int maxPassengers)
 {
    numberOfPassengers_ = 0;
    maxPassengers_ = maxPassengers;
    fuelLevel_ = 10;
+   state_ = Idle;
 };
 
-int Vehicle::GetMaxPassengers()
+unsigned int Vehicle::GetMaxPassengers()
 {
    return maxPassengers_;
 };
 
-int Vehicle::GetNumberOfPassengers()
+unsigned int Vehicle::GetNumberOfPassengers()
 {
    return numberOfPassengers_;
 };

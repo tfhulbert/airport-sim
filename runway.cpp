@@ -12,7 +12,7 @@ Runway::Runway(int runwayLength)
    runwayLength_ = runwayLength;
 }
 
-int Runway::GetRunwayLength()
+unsigned int Runway::GetRunwayLength()
 {
    return runwayLength_;
 }

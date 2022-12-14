@@ -14,10 +14,11 @@ Aircraft::Aircraft()
 
 };
 
-Aircraft::Aircraft(std::string aircraftIdentifier, int maxPassengers)
+Aircraft::Aircraft(std::string aircraftIdentifier, unsigned int maxPassengers)
 {
    aircraftIdentifier_ = aircraftIdentifier;
    maxPassengers_ = maxPassengers;
+   state_ = Idle;
 
    std::cout << "Created new aircraft with identifier " << aircraftIdentifier_ << " and max passengers " << maxPassengers_ << std::endl;
 };

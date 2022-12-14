@@ -7,7 +7,7 @@
 #include "hanger.h"
 #include <stdlib.h>
 
-Hanger::Hanger(int hangerId)
+Hanger::Hanger(unsigned int hangerId)
 {
    storedVehicle_ = NULL;
    hangerId_ = hangerId;
@@ -30,7 +30,7 @@ void Hanger::StoreAircraft(Aircraft* aircraft)
    storedVehicle_ = aircraft;
 }
 
-int Hanger::GetHangerId()
+unsigned int Hanger::GetHangerId()
 {
    return hangerId_;
 }

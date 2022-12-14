@@ -19,11 +19,64 @@
 class Airport
 {
    public:
-      Airport(int runwayCount, int hangerCount, int terminalCount);
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: Airport
+      //
+      // Description:
+      // Constructor for the Airport class.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned int terminalCount);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetRunwayCount
+      //
+      // Description:
+      // Returns the number of Runway objects associated with the object.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
       unsigned int GetRunwayCount();
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetHangerCount
+      //
+      // Description:
+      // Returns the number of Hanger objects associated with the object.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
       unsigned int GetHangerCount();
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetTerminalCount
+      //
+      // Description:
+      // Returns the number of Terminal objects associated with the object.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
       unsigned int GetTerminalCount();
 
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: FindEmptyHanger
+      //
+      // Description:
+      // Returns a pointer to the first available empty hanger.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
       Hanger* FindEmptyHanger();
 
    private:
@@ -31,9 +84,9 @@ class Airport
       std::list<Terminal*> TerminalList_;
       std::list<Hanger*> hangerList_;
 
-      int totalHangerCount_;
-      int totalRunwayCount_;
-      int totalTerminalCount_;
+      unsigned int totalHangerCount_;
+      unsigned int totalRunwayCount_;
+      unsigned int totalTerminalCount_;
 };
 
 #endif // AIRPORT_H
