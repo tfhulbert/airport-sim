@@ -29,7 +29,21 @@ class Airport
       // Notes:
       //
       //-------------------------------------------------------------------------------
-      Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned int terminalCount);
+      Airport( unsigned int runwayCount, 
+               unsigned int hangerCount, 
+               unsigned int terminalCount);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: ~Airport
+      //
+      // Description:
+      // Destructor for the Airport class.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      ~Airport();
 
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
@@ -81,7 +95,7 @@ class Airport
 
    private:
       std::list<Runway*> runwayList_;
-      std::list<Terminal*> TerminalList_;
+      std::list<Terminal*> terminalList_;
       std::list<Hanger*> hangerList_;
 
       unsigned int totalHangerCount_;

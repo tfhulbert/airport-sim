@@ -6,7 +6,7 @@
 
 #include "airport.h"
 
-#define DEFAULT_RUNWAY_LENGTH 1000
+constexpr unsigned int DEFAULT_RUNWAY_LENGTH = 1000;
 
 Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned int terminalCount)
 {
@@ -20,7 +20,7 @@ Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned in
       // create new runway and add to airport's runway list
       Runway *newRunway = new Runway(DEFAULT_RUNWAY_LENGTH);
       totalRunwayCount_++;
-      this->runwayList_.push_back(newRunway);
+      runwayList_.push_back(newRunway);
    }
 
    // initialise hangers
@@ -29,7 +29,7 @@ Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned in
       // create new hanger and add to airport's runway list
       Hanger *newHanger = new Hanger(i);
       totalHangerCount_++;
-      this->hangerList_.push_back(newHanger);
+      hangerList_.push_back(newHanger);
    }
 
    totalTerminalCount_ = terminalCount;
@@ -37,6 +37,33 @@ Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned in
    std::cout << "Number of Runways is " << totalRunwayCount_ << std::endl;
    std::cout << "Number of Hangers is " << totalHangerCount_ << std::endl;
    std::cout << "Number of Terminals is " << totalTerminalCount_ << std::endl;
+}
+
+Airport::~Airport()
+{
+      // clean up Runway objects
+   std::list<Runway*>::iterator runwayIterator;
+   for (runwayIterator = runwayList_.begin(); runwayIterator != runwayList_.end(); ++runwayIterator)
+   {
+      Runway* runwayPointer = *runwayIterator;
+      delete runwayPointer;
+   }  
+
+   // clean up Hanger objects
+   std::list<Hanger*>::iterator hangerIterator;
+   for (hangerIterator = hangerList_.begin(); hangerIterator != hangerList_.end(); ++hangerIterator)
+   {
+      Hanger* hangerPointer = *hangerIterator;
+      delete hangerPointer;
+   }   
+
+   // clean up Terminal objects
+   std::list<Terminal*>::iterator terminalIterator;
+   for (terminalIterator = terminalList_.begin(); terminalIterator != terminalList_.end(); ++terminalIterator)
+   {
+      Terminal* terminalPointer = *terminalIterator;
+      delete terminalPointer;
+   }   
 }
 
 unsigned int Airport::GetRunwayCount()
