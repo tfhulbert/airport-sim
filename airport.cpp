@@ -4,16 +4,15 @@
 //
 //-------------------------------------------------------------------------------
 
-#include "infrastructure.h"
-
-using namespace Infrastructure;
+#include "airport.h"
 
 Airport::Airport(int runwayCount, int hangerCount, int terminalCount)
 {
    for (int i = 0; i < runwayCount; i++) 
    {
-      
+      Runway* newRunway = new Runway(1000);
       totalRunwayCount_++;
+      this->runwayList_.push_back(newRunway);
    }
 
    totalHangerCount_ = hangerCount;
@@ -33,9 +32,4 @@ int Airport::GetHangerCount()
 int Airport::GetTerminalCount()
 {
    return totalTerminalCount_;
-}
-
-Hanger::Hanger(int runwayLength)
-{
-   
 }

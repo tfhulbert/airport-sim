@@ -1,7 +1,5 @@
 #include <iostream>
-#include "infrastructure.h"
-
-using namespace Infrastructure;
+#include "airport.h"
 
 int main()
 {
