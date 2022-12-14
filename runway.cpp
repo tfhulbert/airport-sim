@@ -8,6 +8,7 @@
 
 Runway::Runway(int runwayLength)
 {
+   bool runwayFree_ = true;
    runwayLength_ = runwayLength;
 }
 

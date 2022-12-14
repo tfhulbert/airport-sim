@@ -17,11 +17,11 @@ class Runway
 {
    public:
       Runway(int runwayLength);
-      int GetRunwayLength();
+      unsigned int GetRunwayLength();
 
    private:
-      bool runwayFree_ = true;
-      int runwayLength_ = 0;
+      bool runwayFree_;
+      unsigned int runwayLength_;
       // add pointer to aircraft
 };
 

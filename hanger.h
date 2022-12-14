@@ -10,10 +10,19 @@
 #ifndef HANGER_H
 #define HANGER_H
 
+#include "aircraft.h"
+
 class Hanger
 {
    public:
-      Hanger();
+      Hanger(int hangerId);
+      bool CheckHanger(); // returns true if hanger is occupied
+      void StoreAircraft(Aircraft* aircraft);
+      unsigned int GetHangerId();
+   
+   private:
+      Aircraft* storedVehicle_;
+      int hangerId_;
 };
 
 #endif // HANGER_H

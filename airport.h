@@ -20,18 +20,20 @@ class Airport
 {
    public:
       Airport(int runwayCount, int hangerCount, int terminalCount);
-      int GetRunwayCount();
-      int GetHangerCount();
-      int GetTerminalCount();
+      unsigned int GetRunwayCount();
+      unsigned int GetHangerCount();
+      unsigned int GetTerminalCount();
+
+      Hanger* FindEmptyHanger();
 
    private:
       std::list<Runway*> runwayList_;
       std::list<Terminal*> TerminalList_;
       std::list<Hanger*> hangerList_;
 
-      int totalHangerCount_ = 0;
-      int totalRunwayCount_ = 0;
-      int totalTerminalCount_ = 0;
+      int totalHangerCount_;
+      int totalRunwayCount_;
+      int totalTerminalCount_;
 };
 
 #endif // AIRPORT_H

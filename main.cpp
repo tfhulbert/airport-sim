@@ -1,11 +1,18 @@
 #include <iostream>
+#include "aircraft.h"
 #include "airport.h"
 
 int main()
 {
-    Airport* TangaloomaAirport = new Airport(1, 5, 1);
-    std::cout << "Welcome to airport sim" << std::endl;
-    std::cout << "Number of Runways is " << TangaloomaAirport->GetRunwayCount() << std::endl;
-    std::cout << "Number of Hangers is " << TangaloomaAirport->GetHangerCount() << std::endl;
-    std::cout << "Number of Terminals is " << TangaloomaAirport->GetTerminalCount() << std::endl;
+   std::cout << "Welcome to airport sim" << std::endl;
+
+   Airport* TangaloomaAirport = new Airport(1, 5, 1);
+
+   Aircraft* cargoPlane = new Aircraft("NZ127", 2);
+
+   Hanger* empty = TangaloomaAirport->FindEmptyHanger();
+
+   empty->StoreAircraft(cargoPlane);
+
+   empty = TangaloomaAirport->FindEmptyHanger();
 }
