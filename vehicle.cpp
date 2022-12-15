@@ -16,7 +16,7 @@ Vehicle::Vehicle(unsigned int maxPassengers)
    numberOfPassengers_ = 0;
    maxPassengers_ = maxPassengers;
    fuelLevel_ = 10;
-   state_ = Idle;
+   //state_ = Idle;
 };
 
 unsigned int Vehicle::GetMaxPassengers()

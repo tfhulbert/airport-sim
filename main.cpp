@@ -6,13 +6,18 @@ int main()
 {
    std::cout << "Welcome to airport sim" << std::endl;
 
-   Airport TangaloomaAirport = Airport(1, 5, 1);
+   Airport tangaloomaAirport = Airport(1, 5, 1);
 
    Aircraft cargoPlane = Aircraft("NZ127", 2);
+   //Aircraft passengerPlane = Aircraft("QF236", 5);
 
-   Hanger* emptyHanger = TangaloomaAirport.FindEmptyHanger();
+   Hanger* emptyHanger = tangaloomaAirport.FindEmptyHanger();
 
    emptyHanger->StoreAircraft(&cargoPlane);
 
-   emptyHanger = TangaloomaAirport.FindEmptyHanger();
+   emptyHanger = tangaloomaAirport.FindEmptyHanger();
+
+   std::cout << "Deconstructed airport" << std::endl;
+
+   return 0;
 }

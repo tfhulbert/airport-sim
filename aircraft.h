@@ -15,15 +15,6 @@
 
 class Aircraft : public Vehicle
 {
-   enum AircraftState : unsigned int
-   {
-      Idle = 0,
-      Parked,
-      Running,
-      Taxiing,
-      Flying
-   };
-
    public:
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
@@ -45,14 +36,38 @@ class Aircraft : public Vehicle
       // Overloaded constructor for the Aircraft class.
       //
       // Notes:
-      // {notes}
       //
       //-------------------------------------------------------------------------------
-      Aircraft(std::string aircraftIdentifier, unsigned int maxPassengers);
+      Aircraft(std::string aircraftIdentifier, 
+               unsigned int maxPassengers);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: SetState
+      //
+      // Description:
+      // Sets the aircraft state.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      //void SetState(VehicleState state);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetState
+      //
+      // Description:
+      // Returns the aircraft state.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      //VehicleState GetState();
 
    protected:
       std::string aircraftIdentifier_;
-      AircraftState state_;
+      //AircraftState state_;
 };
 
 #endif // AIRCRAFT_H

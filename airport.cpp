@@ -8,7 +8,9 @@
 
 constexpr unsigned int DEFAULT_RUNWAY_LENGTH = 1000;
 
-Airport::Airport(unsigned int runwayCount, unsigned int hangerCount, unsigned int terminalCount)
+Airport::Airport( unsigned int runwayCount, 
+                  unsigned int hangerCount, 
+                  unsigned int terminalCount)
 {
    totalHangerCount_ = 0;
    totalRunwayCount_ = 0;
@@ -86,7 +88,7 @@ Hanger* Airport::FindEmptyHanger()
    for (hangerSearch = hangerList_.begin(); hangerSearch != hangerList_.end(); ++hangerSearch)
    {
       searchItem = *hangerSearch;
-      std::cout << searchItem->GetHangerId() << std::endl;
+      //std::cout << searchItem->GetHangerId() << std::endl;
       if(!(searchItem->CheckHanger()))
       {
          foundEmptyHanger = true;

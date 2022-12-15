@@ -68,14 +68,22 @@ class Vehicle
       //
       //-------------------------------------------------------------------------------
       unsigned int GetNumberOfPassengers();
+
+      /*typedef enum VehicleState
+      {
+         Idle = 0,
+         Parked,
+         Running,
+         Taxiing,
+         Flying
+      } AircraftState;*/
    
    protected:
       unsigned int numberOfPassengers_;
       unsigned int maxPassengers_;
       unsigned int fuelLevel_;
-
-   private:
-      VehicleState state_;
+      //VehicleState state_;
+      
 };
 
 #endif // VEHICLE_H

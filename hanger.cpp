@@ -28,6 +28,12 @@ bool Hanger::CheckHanger()
 void Hanger::StoreAircraft(Aircraft* aircraft)
 {
    storedVehicle_ = aircraft;
+   //aircraft->SetState(Aircraft::Parked);
+}
+
+Aircraft* GetStoredAircraft()
+{
+
 }
 
 unsigned int Hanger::GetHangerId()

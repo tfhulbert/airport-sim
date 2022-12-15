@@ -53,6 +53,18 @@ class Hanger
 
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
+      // Function: GetStoredAircraft
+      //
+      // Description:
+      // Returns the pointer of the stored aircraft
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      Aircraft* GetStoredAircraft();
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
       // Function: GetHangerId
       //
       // Description:
