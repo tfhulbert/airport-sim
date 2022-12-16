@@ -25,13 +25,13 @@ bool Hanger::CheckHanger()
    return hangerFull;
 }
 
-void Hanger::StoreAircraft(Aircraft* aircraft)
+void Hanger::StoreVehicle(Vehicle* vehicle)
 {
-   storedVehicle_ = aircraft;
-   //aircraft->SetState(Aircraft::Parked);
+   storedVehicle_ = vehicle;
+   vehicle->SetState(Vehicle::Parked);
 }
 
-Aircraft* GetStoredAircraft()
+Aircraft* GetStoredVehicle()
 {
 
 }

@@ -28,3 +28,13 @@ unsigned int Vehicle::GetNumberOfPassengers()
 {
    return numberOfPassengers_;
 };
+
+void Vehicle::SetState(Vehicle::VehicleState state)
+{
+   state_ = state;
+};
+
+Vehicle::VehicleState Vehicle::GetState()
+{
+   return state_;
+};

@@ -41,30 +41,6 @@ class Aircraft : public Vehicle
       Aircraft(std::string aircraftIdentifier, 
                unsigned int maxPassengers);
 
-      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-      //
-      // Function: SetState
-      //
-      // Description:
-      // Sets the aircraft state.
-      //
-      // Notes:
-      //
-      //-------------------------------------------------------------------------------
-      //void SetState(VehicleState state);
-
-      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-      //
-      // Function: GetState
-      //
-      // Description:
-      // Returns the aircraft state.
-      //
-      // Notes:
-      //
-      //-------------------------------------------------------------------------------
-      //VehicleState GetState();
-
    protected:
       std::string aircraftIdentifier_;
       //AircraftState state_;

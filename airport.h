@@ -93,6 +93,18 @@ class Airport
       //-------------------------------------------------------------------------------
       Hanger* FindEmptyHanger();
 
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: FindEmptyRunway
+      //
+      // Description:
+      // Returns a pointer to the first available empty runway.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      Runway* FindEmptyRunway();
+
    private:
       std::list<Runway*> runwayList_;
       std::list<Terminal*> terminalList_;

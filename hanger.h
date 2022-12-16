@@ -41,15 +41,15 @@ class Hanger
 
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
-      // Function: StoreAircraft
+      // Function: StoreVehicle
       //
       // Description:
-      // Assigns the pointer of an aircraft to the stored vehicle variable.
+      // Assigns the pointer of a vehicle to the stored vehicle variable.
       //
       // Notes:
       //
       //-------------------------------------------------------------------------------
-      void StoreAircraft(Aircraft* aircraft);
+      void virtual StoreVehicle(Vehicle* vehicle);
 
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
@@ -75,8 +75,8 @@ class Hanger
       //-------------------------------------------------------------------------------
       unsigned int GetHangerId();
    
-   private:
-      Aircraft* storedVehicle_;
+   protected:
+      Vehicle* storedVehicle_;
       unsigned int hangerId_;
 };
 

@@ -11,13 +11,21 @@ int main()
    Aircraft cargoPlane = Aircraft("NZ127", 2);
    //Aircraft passengerPlane = Aircraft("QF236", 5);
 
-   Hanger* emptyHanger = tangaloomaAirport.FindEmptyHanger();
+   /*Hanger* emptyHanger = tangaloomaAirport.FindEmptyHanger();
 
-   emptyHanger->StoreAircraft(&cargoPlane);
+   std::cout << "Aircraft is in state " << cargoPlane.GetState() << std::endl;
 
-   emptyHanger = tangaloomaAirport.FindEmptyHanger();
+   emptyHanger->StoreVehicle(&cargoPlane);
 
-   std::cout << "Deconstructed airport" << std::endl;
+   emptyHanger = tangaloomaAirport.FindEmptyRunway();*/
+
+   Runway* emptyRunway = tangaloomaAirport.FindEmptyRunway();
+
+   emptyRunway->StoreVehicle(&cargoPlane);
+
+   std::cout << "Aircraft is in state " << cargoPlane.GetState() << std::endl;
+
+   emptyRunway = tangaloomaAirport.FindEmptyRunway();
 
    return 0;
 }

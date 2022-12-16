@@ -10,10 +10,12 @@
 #ifndef RUNWAY_H
 #define RUNWAY_H
 
+#include "hanger.h"
 #include <iostream>
 #include <list>
+#include "vehicle.h"
 
-class Runway
+class Runway : public Hanger
 {
    public:
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -26,7 +28,7 @@ class Runway
       // Notes:
       //
       //-------------------------------------------------------------------------------
-      Runway(int runwayLength);
+      Runway(int runwayId, int runwayLength);
 
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
@@ -40,6 +42,19 @@ class Runway
       //
       //-------------------------------------------------------------------------------
       unsigned int GetRunwayLength();
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: StoreVehicle
+      //
+      // Description:
+      // Assigns the pointer of a vehicle to the stored vehicle variable and sets the
+      // vehicle state.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      void StoreVehicle(Vehicle* vehicle);
 
    private:
       bool runwayFree_;

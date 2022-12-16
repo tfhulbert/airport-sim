@@ -12,15 +12,9 @@
 
 class Vehicle
 {
-   enum VehicleState : unsigned int
-   {
-      Idle = 0,
-      Parked,
-      Running,
-      Operating
-   };
-
    public:
+      enum VehicleState : unsigned int;
+
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
       //
       // Function: Vehicle
@@ -69,20 +63,44 @@ class Vehicle
       //-------------------------------------------------------------------------------
       unsigned int GetNumberOfPassengers();
 
-      /*typedef enum VehicleState
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: SetState
+      //
+      // Description:
+      // Sets the vehicle state.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      void SetState(VehicleState state);
+
+      //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      //
+      // Function: GetState
+      //
+      // Description:
+      // Returns the aircraft state.
+      //
+      // Notes:
+      //
+      //-------------------------------------------------------------------------------
+      VehicleState GetState();
+
+      typedef enum VehicleState : unsigned int
       {
          Idle = 0,
          Parked,
          Running,
          Taxiing,
          Flying
-      } AircraftState;*/
+      } VehicleState;
    
    protected:
       unsigned int numberOfPassengers_;
       unsigned int maxPassengers_;
       unsigned int fuelLevel_;
-      //VehicleState state_;
+      VehicleState state_;
       
 };
 

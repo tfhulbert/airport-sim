@@ -20,7 +20,7 @@ Airport::Airport( unsigned int runwayCount,
    for (unsigned int i = 0; i < runwayCount; i++)
    {
       // create new runway and add to airport's runway list
-      Runway *newRunway = new Runway(DEFAULT_RUNWAY_LENGTH);
+      Runway *newRunway = new Runway(i, DEFAULT_RUNWAY_LENGTH);
       totalRunwayCount_++;
       runwayList_.push_back(newRunway);
    }
@@ -101,6 +101,36 @@ Hanger* Airport::FindEmptyHanger()
    {
       
       searchItem = NULL;
+      std::cout << "No hangers available" << std::endl;
+   }
+
+   return searchItem;
+};
+
+Runway* Airport::FindEmptyRunway()
+{
+   bool foundEmptyRunway = false;
+
+   Runway* searchItem;
+
+   std::list<Runway*>::iterator runwaySearch;
+   for (runwaySearch = runwayList_.begin(); runwaySearch != runwayList_.end(); ++runwaySearch)
+   {
+      searchItem = *runwaySearch;
+      //std::cout << searchItem->GetHangerId() << std::endl;
+      if(!(searchItem->CheckHanger()))
+      {
+         foundEmptyRunway = true;
+         std::cout << "Found empty runway at runway " << searchItem->GetHangerId() << std::endl;
+         break;
+      }
+   }
+
+   if (!foundEmptyRunway)
+   {
+      
+      searchItem = NULL;
+      std::cout << "No runways available" << std::endl;
    }
 
    return searchItem;

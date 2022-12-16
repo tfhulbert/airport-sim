@@ -6,7 +6,7 @@
 
 #include "terminal.h"
 
-Terminal::Terminal()
+Terminal::Terminal(int terminalId) : Hanger(terminalId)
 {
-   
+   hangerId_ = terminalId;
 }

@@ -10,7 +10,9 @@
 #ifndef TERMINAL_H
 #define TERMINAL_H
 
-class Terminal
+#include "hanger.h"
+
+class Terminal : public Hanger
 {
    public:
       //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -24,7 +26,7 @@ class Terminal
       // {notes}
       //
       //-------------------------------------------------------------------------------
-      Terminal();
+      Terminal(int terminalId);
 };
 
 #endif // TERMINAL_H
